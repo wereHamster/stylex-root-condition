@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "babel"
+  },
+  "dependencies": {
+    "@stylexjs/stylex": "^0.14.1"
+  }
+}
