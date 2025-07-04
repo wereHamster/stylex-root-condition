@@ -1,8 +1,14 @@
 {
+  "type": "module",
   "scripts": {
     "build": "babel"
   },
   "dependencies": {
-    "@stylexjs/stylex": "^0.14.1"
+    "@babel/cli": "^7.28.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@stylexjs/babel-plugin": "^0.14.1",
+    "@stylexjs/rollup-plugin": "^0.14.1",
+    "@stylexjs/stylex": "^0.14.1",
+    "rollup": "^4.44.1"
   }
 }
