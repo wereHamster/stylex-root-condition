@@ -3,7 +3,14 @@ const config = {
     iterableIsArray: true
   },
   comments: false,
-  plugins: []
+  presets: [
+    [
+      '@babel/preset-react',
+      {
+        runtime: 'automatic'
+      }
+    ],
+  ]
 };
 
 export default config;
