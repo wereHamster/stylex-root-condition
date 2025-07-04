@@ -3,6 +3,7 @@ import stylexPlugin from '@stylexjs/rollup-plugin';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
+import stylexSWCPlugin from '@stylexswc/rollup-plugin';
 
 const babelPlugin = babel({
   babelHelpers: 'bundled'
@@ -22,10 +23,15 @@ const config = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
       preventAssignment: true,
     }),
-    stylexPlugin({
-      dev: false,
-      fileName: 'stylex.css',
-      runtimeInjection: true,
+    // stylexPlugin({
+    //   dev: true,
+    //   runtimeInjection: true,
+    // }),
+    stylexSWCPlugin.default({
+      dev: true,
+      rsOptions: {
+        runtimeInjection: true,
+      }
     })
   ],
 };
